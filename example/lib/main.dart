@@ -14,7 +14,7 @@ void main() {
           child: const Icon(Icons.download),
           onPressed: () async {
             AndroidDownloadManager.enqueue(
-              downloadUrl: "TODO:Download link goes here",
+              downloadUrl: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
               downloadPath: "/storage/emulated/0/Download/",
               fileName: "test.mp4",
             );

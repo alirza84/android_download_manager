@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:8.3.1'
     }
 }
 
@@ -22,7 +22,8 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 34
+    namespace "com.tk.android_download_manager_example"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
