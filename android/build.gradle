@@ -22,7 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 34
+    compileSdk 34
     namespace "com.tk.android_download_manager_example"
 
     compileOptions {
@@ -31,6 +31,10 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdk 16
     }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation-jvm:1.9.1'
 }

@@ -46,12 +46,16 @@ public class DownloadBroadcastReceiver extends BroadcastReceiver implements Even
     @Override
     public void onListen(Object arguments, EventChannel.EventSink events) {
         this.events = events;
-        context.registerReceiver(this, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
-        context.registerReceiver(this, new IntentFilter(DownloadManager.ACTION_NOTIFICATION_CLICKED));
+        if (context != null) {
+            context.registerReceiver(this, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+            context.registerReceiver(this, new IntentFilter(DownloadManager.ACTION_NOTIFICATION_CLICKED));
+        }
     }
 
     @Override
     public void onCancel(Object arguments) {
-        context.unregisterReceiver(this);
+        if (context != null) {
+            context.unregisterReceiver(this);
+        }
     }
 }

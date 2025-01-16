@@ -15,7 +15,7 @@ void main() {
           onPressed: () async {
             AndroidDownloadManager.enqueue(
               downloadUrl: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
-              downloadPath: "/storage/emulated/0/Download/",
+              downloadPath: "/storage/emulated/0/Download",
               fileName: "test.mp4",
             );
           },
