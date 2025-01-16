@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import androidx.core.content.ContextCompat;
 
 import com.tk.android_download_manager.models.DownloadAction;
 
@@ -47,8 +48,8 @@ public class DownloadBroadcastReceiver extends BroadcastReceiver implements Even
     public void onListen(Object arguments, EventChannel.EventSink events) {
         this.events = events;
         if (context != null) {
-            context.registerReceiver(this, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
-            context.registerReceiver(this, new IntentFilter(DownloadManager.ACTION_NOTIFICATION_CLICKED));
+            ContextCompat.registerReceiver(context,this,new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE),ContextCompat.RECEIVER_EXPORTED);
+            ContextCompat.registerReceiver(context,this,new IntentFilter(DownloadManager.ACTION_NOTIFICATION_CLICKED),ContextCompat.RECEIVER_EXPORTED);
         }
     }
 
