@@ -22,7 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 34
+    compileSdk 35
     namespace "com.tk.android_download_manager_example"
 
     compileOptions {
@@ -37,4 +37,5 @@ android {
 
 dependencies {
     implementation 'androidx.annotation:annotation-jvm:1.9.1'
+    implementation 'io.flutter:flutter_embedding_debug:1.0.0'
 }

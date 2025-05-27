@@ -13,6 +13,12 @@ class AndroidDownloadManager {
     await _channel.invokeMethod("requestPermission");
   }
 
+  static Future<String?> get platformVersion async {
+    final String? version = await _channel.invokeMethod('getPlatformVersion');
+    return version;
+  }
+
+
   static Stream _streamSubscription = const Stream.empty();
 
   static Future<int> enqueue({
